@@ -7,7 +7,7 @@ const initialState = {
 const customerSlice = createSlice({
   name: "customer",
   initialState,
-  reducer: {
+  reducers: {
     createCustomer: {
       prepare: function (fullName, nationalID) {
         return {
@@ -29,5 +29,5 @@ const customerSlice = createSlice({
     },
   },
 });
-export const { createCustomer, updateName } = customerSlice.action;
+export const { createCustomer, updateName } = customerSlice.actions;
 export default customerSlice.reducer;
